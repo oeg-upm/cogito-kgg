@@ -13,5 +13,5 @@ curl --location --request POST 'localhost:5000/idf2rdf' \
 docker build -t cogito-kgg .
 ````
 ````
-docker run cogito-kgg
+docker run cogito-kgg  # if we want to use an specific port use --> -p 5000:5000
 ````
