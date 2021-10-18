@@ -1,7 +1,6 @@
-from typing_extensions import final
 from flask import Flask, send_file, request
 import tempfile
-from requestREST import materialise
+from KGG.requestREST import materialise
 
 app = Flask(__name__)
 
