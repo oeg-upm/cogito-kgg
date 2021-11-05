@@ -1,11 +1,11 @@
 FROM python:3.7.12
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY requirements.txt requirements.txt
-
+RUN pip install --upgrade pip
+COPY ./requirements.txt /usr/src/app/requirements.txt
 RUN pip3 install -r requirements.txt
 
-COPY . .
+COPY . /usr/src/app/
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=5000" ]
+#CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=5000" ]

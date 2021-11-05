@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+
+  kgg:
+    build: ./
+    command: python3 manager.py
+    volumes:
+      - ./:/usr/src/app/
+    ports:
+      - 5001:5000
+
+networks:
+  default:
+    external: true
+    name: my_postgres_db_custom-network
